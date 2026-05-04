@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,13 +25,13 @@
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
     <div class="flex h-screen">
         <!-- Sidebar -->
-        <nav class="w-64 bg-white dark:bg-gray-800 shadow-lg">
+        <nav class="w-64 bg-white dark:bg-gray-800 shadow-lg" role="navigation" aria-label="Panel lateral">
             <div class="p-6">
                 <h1 class="text-2xl font-bold text-primary">AgentHub</h1>
             </div>
-            <ul class="space-y-2 px-4">
-                <li><a href="#" class="nav-link block py-2 px-4 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 active" data-section="dashboard">Dashboard</a></li>
-                <li><a href="#" class="nav-link block py-2 px-4 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700" data-section="usuarios">Usuarios</a></li>
+            <ul class="space-y-2 px-4" role="menu" aria-label="Navegación principal">
+                <li><a href="#" class="nav-link block py-2 px-4 rounded-lg bg-gray-200 text-gray-900 dark:bg-gray-700 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" data-section="dashboard" role="menuitem">Dashboard</a></li>
+                <li><a href="#" class="nav-link block py-2 px-4 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700" data-section="usuarios" role="menuitem">Usuarios</a></li>
                 <li><a href="#" class="nav-link block py-2 px-4 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700" data-section="agentes">Agentes</a></li>
                 <li><a href="#" class="nav-link block py-2 px-4 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700" data-section="skills">Skills</a></li>
                 <li><a href="#" class="nav-link block py-2 px-4 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700" data-section="contrataciones">Contrataciones</a></li>
@@ -40,12 +40,12 @@
         </nav>
 
         <!-- Main Content -->
-        <main class="flex-1 flex flex-col">
+        <main class="flex-1 flex flex-col" role="main">
             <!-- Top Bar -->
-            <header class="bg-white dark:bg-gray-800 shadow-sm p-4 flex justify-between items-center">
+            <header class="bg-white dark:bg-gray-800 shadow-sm p-4 flex justify-between items-center" aria-label="Barra superior">
                 <h2 class="text-xl font-semibold">AgentHub Admin</h2>
                 <div class="flex items-center space-x-4">
-                    <button id="dark-mode-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600">
+                    <button type="button" id="dark-mode-toggle" aria-label="Alternar modo oscuro" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                         </svg>
@@ -152,7 +152,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Activo</span></td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="relative">
-                                            <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                            <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                             <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openUserModal('Juan Pérez')">Ver detalle</a>
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -167,7 +167,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Pendiente</span></td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="relative">
-                                            <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                            <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                             <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openUserModal('María García')">Ver detalle</a>
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -182,7 +182,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Activo</span></td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="relative">
-                                            <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                            <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                             <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openUserModal('Carlos López')">Ver detalle</a>
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -197,7 +197,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Inactivo</span></td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="relative">
-                                            <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                            <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                             <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openUserModal('Ana Rodríguez')">Ver detalle</a>
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -212,7 +212,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Activo</span></td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="relative">
-                                            <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                            <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                             <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openUserModal('Luis Martínez')">Ver detalle</a>
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -237,9 +237,9 @@
                                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Activo</span>
                                 </div>
                                 <div class="flex items-center space-x-2">
-                                    <button class="toggle-skills text-primary hover:text-primary-dark">Mostrar skills</button>
+                                    <button type="button" class="toggle-skills text-primary hover:text-blue-700" aria-expanded="false">Mostrar skills</button>
                                     <div class="relative">
-                                        <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                        <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                         <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openAgentModal('Agente de Ventas')">Configurar</a>
                                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -247,7 +247,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="skills-list hidden mt-4 transition-all duration-300">
+                            <div class="skills-list max-h-0 opacity-0 overflow-hidden mt-4 transition-all duration-300">
                                 <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400">
                                     <li>Ventas</li>
                                     <li>Negociación</li>
@@ -263,9 +263,9 @@
                                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">Mantenimiento</span>
                                 </div>
                                 <div class="flex items-center space-x-2">
-                                    <button class="toggle-skills text-primary hover:text-primary-dark">Mostrar skills</button>
+                                    <button type="button" class="toggle-skills text-primary hover:text-blue-700" aria-expanded="false">Mostrar skills</button>
                                     <div class="relative">
-                                        <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                        <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                         <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openAgentModal('Agente de Soporte')">Configurar</a>
                                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -273,7 +273,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="skills-list hidden mt-4 transition-all duration-300">
+                            <div class="skills-list max-h-0 opacity-0 overflow-hidden mt-4 transition-all duration-300">
                                 <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400">
                                     <li>Soporte técnico</li>
                                     <li>Resolución de problemas</li>
@@ -289,9 +289,9 @@
                                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">Activo</span>
                                 </div>
                                 <div class="flex items-center space-x-2">
-                                    <button class="toggle-skills text-primary hover:text-primary-dark">Mostrar skills</button>
+                                    <button type="button" class="toggle-skills text-primary hover:text-blue-700" aria-expanded="false">Mostrar skills</button>
                                     <div class="relative">
-                                        <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                        <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                         <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openAgentModal('Agente de Marketing')">Configurar</a>
                                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -299,7 +299,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="skills-list hidden mt-4 transition-all duration-300">
+                            <div class="skills-list max-h-0 opacity-0 overflow-hidden mt-4 transition-all duration-300">
                                 <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400">
                                     <li>Marketing digital</li>
                                     <li>SEO</li>
@@ -315,9 +315,9 @@
                                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">Inactivo</span>
                                 </div>
                                 <div class="flex items-center space-x-2">
-                                    <button class="toggle-skills text-primary hover:text-primary-dark">Mostrar skills</button>
+                                    <button type="button" class="toggle-skills text-primary hover:text-blue-700" aria-expanded="false">Mostrar skills</button>
                                     <div class="relative">
-                                        <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                        <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                         <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openAgentModal('Agente de Desarrollo')">Configurar</a>
                                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -325,7 +325,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="skills-list hidden mt-4 transition-all duration-300">
+                            <div class="skills-list max-h-0 opacity-0 overflow-hidden mt-4 transition-all duration-300">
                                 <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400">
                                     <li>Programación</li>
                                     <li>Desarrollo web</li>
@@ -349,7 +349,7 @@
                                     <p class="text-xs text-gray-500 dark:text-gray-500 mt-2">Usada por 3 agentes</p>
                                 </div>
                                 <div class="relative">
-                                    <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                    <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                     <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Ver detalle</a>
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -365,7 +365,7 @@
                                     <p class="text-xs text-gray-500 dark:text-gray-500 mt-2">Usada por 2 agentes</p>
                                 </div>
                                 <div class="relative">
-                                    <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                    <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                     <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Ver detalle</a>
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -381,7 +381,7 @@
                                     <p class="text-xs text-gray-500 dark:text-gray-500 mt-2">Usada por 1 agente</p>
                                 </div>
                                 <div class="relative">
-                                    <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                    <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                     <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Ver detalle</a>
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -397,7 +397,7 @@
                                     <p class="text-xs text-gray-500 dark:text-gray-500 mt-2">Usada por 4 agentes</p>
                                 </div>
                                 <div class="relative">
-                                    <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                    <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                     <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Ver detalle</a>
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Eliminar</a>
@@ -432,7 +432,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap">$15,000</td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="relative">
-                                            <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                            <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                             <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openContractModal('Empresa A')">Ver detalle</a>
                                             </div>
@@ -447,7 +447,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap">$12,000</td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="relative">
-                                            <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                            <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                             <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openContractModal('Empresa B')">Ver detalle</a>
                                             </div>
@@ -462,7 +462,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap">$18,000</td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="relative">
-                                            <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                            <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                             <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openContractModal('Empresa C')">Ver detalle</a>
                                             </div>
@@ -477,7 +477,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap">$25,000</td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="relative">
-                                            <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                            <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                             <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openContractModal('Empresa D')">Ver detalle</a>
                                             </div>
@@ -504,7 +504,7 @@
                                     <p class="text-sm text-gray-600 dark:text-gray-400">Error de conexión a la base de datos</p>
                                 </div>
                                 <div class="relative">
-                                    <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                    <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                     <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openErrorModal('Error de conexión a la base de datos')">Ver detalle</a>
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Marcar como resuelto</a>
@@ -523,7 +523,7 @@
                                     <p class="text-sm text-gray-600 dark:text-gray-400">Tiempo de respuesta elevado</p>
                                 </div>
                                 <div class="relative">
-                                    <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                    <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                     <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openErrorModal('Tiempo de respuesta elevado')">Ver detalle</a>
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Marcar como resuelto</a>
@@ -542,7 +542,7 @@
                                     <p class="text-sm text-gray-600 dark:text-gray-400">Fallo en la API de redes sociales</p>
                                 </div>
                                 <div class="relative">
-                                    <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                    <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                     <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openErrorModal('Fallo en la API de redes sociales')">Ver detalle</a>
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Marcar como resuelto</a>
@@ -561,7 +561,7 @@
                                     <p class="text-sm text-gray-600 dark:text-gray-400">Error de compilación en el código</p>
                                 </div>
                                 <div class="relative">
-                                    <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                    <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                     <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openErrorModal('Error de compilación en el código')">Ver detalle</a>
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Marcar como resuelto</a>
@@ -580,7 +580,7 @@
                                     <p class="text-sm text-gray-600 dark:text-gray-400">Memoria insuficiente</p>
                                 </div>
                                 <div class="relative">
-                                    <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                    <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                     <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openErrorModal('Memoria insuficiente')">Ver detalle</a>
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Marcar como resuelto</a>
@@ -599,7 +599,7 @@
                                     <p class="text-sm text-gray-600 dark:text-gray-400">Timeout en la conexión</p>
                                 </div>
                                 <div class="relative">
-                                    <button class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">⋮</button>
+                                    <button type="button" class="dropdown-btn text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" aria-haspopup="true" aria-expanded="false">⋮</button>
                                     <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg z-10">
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700" onclick="openErrorModal('Timeout en la conexión')">Ver detalle</a>
                                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Marcar como resuelto</a>
@@ -614,11 +614,11 @@
     </div>
 
     <!-- Modal for User Details -->
-    <div id="userModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div id="userModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="userModalTitle">
         <div class="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">
             <div class="flex justify-between items-center mb-4">
-                <h3 class="text-lg font-semibold">Detalle del Usuario</h3>
-                <button id="closeUserModal" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">&times;</button>
+                <h3 id="userModalTitle" class="text-lg font-semibold">Detalle del Usuario</h3>
+                <button type="button" id="closeUserModal" aria-label="Cerrar modal de usuario" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">&times;</button>
             </div>
             <div id="userModalContent">
                 <!-- Content will be populated by JavaScript -->
@@ -627,28 +627,28 @@
     </div>
 
     <!-- Modal for Agent Configuration -->
-    <div id="agentModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div id="agentModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="agentModalTitle">
         <div class="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-lg mx-4">
             <div class="flex justify-between items-center mb-4">
-                <h3 class="text-lg font-semibold">Configurar Agente</h3>
-                <button id="closeAgentModal" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">&times;</button>
+                <h3 id="agentModalTitle" class="text-lg font-semibold">Configurar Agente</h3>
+                <button type="button" id="closeAgentModal" aria-label="Cerrar modal de agente" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">&times;</button>
             </div>
             <div>
                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Prompt del Agente</label>
                 <textarea id="agentPrompt" class="w-full h-32 p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" placeholder="Ingresa el prompt del agente..."></textarea>
             </div>
             <div class="flex justify-end mt-4">
-                <button id="saveAgentConfig" class="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark">Guardar</button>
+                <button id="saveAgentConfig" class="px-4 py-2 bg-primary text-white rounded-md hover:bg-blue-600">Guardar</button>
             </div>
         </div>
     </div>
 
     <!-- Modal for Contract Details -->
-    <div id="contractModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div id="contractModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contractModalTitle">
         <div class="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4">
             <div class="flex justify-between items-center mb-4">
-                <h3 class="text-lg font-semibold">Detalle del Contrato</h3>
-                <button id="closeContractModal" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">&times;</button>
+                <h3 id="contractModalTitle" class="text-lg font-semibold">Detalle del Contrato</h3>
+                <button type="button" id="closeContractModal" aria-label="Cerrar modal de contrato" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">&times;</button>
             </div>
             <div id="contractModalContent">
                 <!-- Content will be populated by JavaScript -->
@@ -657,11 +657,11 @@
     </div>
 
     <!-- Modal for Error Details -->
-    <div id="errorModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div id="errorModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="errorModalTitle">
         <div class="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-lg mx-4">
             <div class="flex justify-between items-center mb-4">
-                <h3 class="text-lg font-semibold">Detalle del Error</h3>
-                <button id="closeErrorModal" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">&times;</button>
+                <h3 id="errorModalTitle" class="text-lg font-semibold">Detalle del Error</h3>
+                <button type="button" id="closeErrorModal" aria-label="Cerrar modal de error" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">&times;</button>
             </div>
             <div id="errorModalContent">
                 <!-- Content will be populated by JavaScript -->
@@ -677,14 +677,16 @@
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
-                const targetSection = e.target.getAttribute('data-section');
+                const targetSection = link.getAttribute('data-section');
                 
-                // Remove active class from all links and sections
-                navLinks.forEach(l => l.classList.remove('active'));
+                navLinks.forEach(l => {
+                    l.classList.remove('bg-gray-200', 'text-gray-900', 'dark:bg-gray-700', 'dark:text-white');
+                    l.classList.add('text-gray-700', 'dark:text-gray-300');
+                });
                 sections.forEach(s => s.classList.add('hidden'));
                 
-                // Add active class to clicked link and show target section
-                e.target.classList.add('active');
+                link.classList.add('bg-gray-200', 'text-gray-900', 'dark:bg-gray-700', 'dark:text-white');
+                link.classList.remove('text-gray-700', 'dark:text-gray-300');
                 document.getElementById(targetSection).classList.remove('hidden');
             });
         });
@@ -696,6 +698,8 @@
         // Load dark mode preference from localStorage
         if (localStorage.getItem('darkMode') === 'true') {
             html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
         }
 
         darkModeToggle.addEventListener('click', () => {
@@ -707,12 +711,14 @@
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('dropdown-btn')) {
                 const menu = e.target.nextElementSibling;
-                // Close all other menus
                 document.querySelectorAll('.dropdown-menu').forEach(m => {
                     if (m !== menu) m.classList.add('hidden');
                 });
                 menu.classList.toggle('hidden');
+                const expanded = menu.classList.contains('hidden') ? 'false' : 'true';
+                e.target.setAttribute('aria-expanded', expanded);
             } else if (!e.target.closest('.dropdown-menu') && !e.target.classList.contains('dropdown-btn')) {
+                document.querySelectorAll('.dropdown-btn').forEach(button => button.setAttribute('aria-expanded', 'false'));
                 document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.add('hidden'));
             }
         });
@@ -720,9 +726,17 @@
         // Toggle skills
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('toggle-skills')) {
-                const skillsList = e.target.closest('.bg-white, .dark\\:bg-gray-800').querySelector('.skills-list');
-                skillsList.classList.toggle('hidden');
-                e.target.textContent = skillsList.classList.contains('hidden') ? 'Mostrar skills' : 'Ocultar skills';
+                const card = e.target.closest('.p-6.rounded-lg');
+                const skillsList = card.querySelector('.skills-list');
+                const isOpen = skillsList.classList.contains('max-h-96');
+
+                skillsList.classList.toggle('max-h-0', isOpen);
+                skillsList.classList.toggle('max-h-96', !isOpen);
+                skillsList.classList.toggle('opacity-0', isOpen);
+                skillsList.classList.toggle('opacity-100', !isOpen);
+
+                e.target.textContent = isOpen ? 'Mostrar skills' : 'Ocultar skills';
+                e.target.setAttribute('aria-expanded', String(!isOpen));
             }
         });
 
